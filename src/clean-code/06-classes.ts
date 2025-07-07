@@ -13,6 +13,10 @@
 		}
 	}
 
+	class User extends Person {
+		
+	}
+
 	const newPerson = new Person('Alejandro Ivan Lizarraga Rojas', 'M', new Date('2002-10-08'));
 	console.log({ newPerson });
 })()
