@@ -46,3 +46,11 @@ Clean code es aquel que se ha escrito con la intención de que otra persona o tu
 - Evitar el uso del "else"
 - Priorizar el uso de la condicional ternaria
 - Evitar anidaciones innecesarias
+
+### Principio DRY
+
+- Don't Repeat Yourself
+- Simplemente evitar tener código duplicado
+- Simplifica las pruebas
+- Ayuda las pruebas
+- Aplicar el principio DRY, suele llevar a refactorizar
