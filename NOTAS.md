@@ -37,3 +37,12 @@ Cuando no se hacen pruebas automaticas se suele incurrir en el famoso **"Si func
 ### Clean code
 
 Clean code es aquel que se ha escrito con la intención de que otra persona o tu mismo lo entienda en el futuro, este debería ser simple y directo, deberia poder leerse con la misma facilidad que un texto bien escrito.
+
+### Consideraciones para funciones
+
+- Deben ser simples
+- Su tamaño debe ser reducido
+- Menos de 20 lineas
+- Evitar el uso del "else"
+- Priorizar el uso de la condicional ternaria
+- Evitar anidaciones innecesarias

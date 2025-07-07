@@ -12,10 +12,10 @@
 	}
 
 	interface Movie {
-		title: string, 
-		description: string, 
-		rating: number, 
-		cast: string[]
+		title: string;
+		description: string;
+		rating: number;
+		cast: string[];
 	}
 
 	function createMovie({ title, description, rating, cast }: Movie) {
@@ -31,4 +31,14 @@
 		console.log('Crear actor');
 		return true;
 	}
+
+	// Continuar con el curso
+	const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }): number => {
+
+		if (isDead) return 1500;
+
+		if (isSeparated) return 2500;
+
+		return isRetired ? 3000 : 4000;
+	};
 })();
