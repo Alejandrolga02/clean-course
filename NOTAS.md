@@ -54,3 +54,9 @@ Clean code es aquel que se ha escrito con la intención de que otra persona o tu
 - Simplifica las pruebas
 - Ayuda las pruebas
 - Aplicar el principio DRY, suele llevar a refactorizar
+
+## Clean Code y Clases
+
+Las clases deben de tener una responsabilidad especifica ya que al ser muy generica va a ser dificil de mantener (probar, expandir).
+
+Es importante tener presente que así como todo, hay excepciones a cada regla, pero esto debería ser un caso aislado y no el estándar. Tratemos de escribir un mejor código y dejar de lado la comodidad de hacer las cosas como se han venido haciendo, especialmente si esas cosas traen muchos problemas.
