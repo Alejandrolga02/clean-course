@@ -60,3 +60,78 @@ Clean code es aquel que se ha escrito con la intención de que otra persona o tu
 Las clases deben de tener una responsabilidad especifica ya que al ser muy generica va a ser dificil de mantener (probar, expandir).
 
 Es importante tener presente que así como todo, hay excepciones a cada regla, pero esto debería ser un caso aislado y no el estándar. Tratemos de escribir un mejor código y dejar de lado la comodidad de hacer las cosas como se han venido haciendo, especialmente si esas cosas traen muchos problemas.
+
+## Estructura recomendada de una clase
+
+### Propiedades
+
+Comenzar con la lista de propiedades y respetar las convenciones del lenguaje o framework con el que trabajas.
+
+1. Propiedades estáticas
+2. Propiedades públicas de último
+
+### Métodos
+
+1. Se empieza por los constructores estáticos si existen
+2. El constructor
+3. Los métodos estáticos
+4. Métodos privados después
+5. Resto de métodos de instancia ordenados de mayor a menor importancia
+6. Y por ultimo los getter y setters
+
+## Code smells y Acronimo STUPID
+
+1. S - Singleton: patrón singleton
+2. T - Tight Coupling: alto acoplamiento
+3. U - Unestability: código no testeado
+4. P - Premature optimization: optimizaciones prematuras
+5. I - Indescriptive Naming: nombres poco descriptivos
+6. D - Duplication: Duplicidad de código, no aplicar el principio DRY.
+
+### Patrón Singleton
+
+Pros:
+
+- Garantiza una única instancia de la clase a lo largo de toda la aplicación.
+
+Cons:
+
+- Vive en el contexto global.
+- Puede ser modificado por cualquiera en cualquier momento.
+- No es rastreable.
+- Dificil de testear debido a su ubicacion.
+
+### Alto acoplamiento
+
+Lo ideal seria manejar un bajo acoplamiento y una buena cohesión.
+
+Desventajas del alto acoplamiento
+
+- Un cambio en un módulo genera un efecto dominó de los cambios en otros módulos.
+- El ensamblaje de módulos puede requerir más esfuerzo y tiempo debido a la dependencia entre módulos.
+- Un módulo en particular puede ser mas difícil de reutilizar y probar porque se deben incluir los módulos dependientes.
+
+Posibles soluciones:
+
+- **A** tiene un atributo que se refiere a **B**
+- **A** llama a los servicios de un objeto **B**
+- **A** tiene un método que hace referencia a **B** (a través del tipo de retorno o parámetro)
+- **A** es una subclase o implementa la clase **B**
+
+### Cohesión
+
+La cohesión se refiere a lo que la clase o módulo puede hacer.
+
+- Una baja cohesión significaria que la clase realiza una gran variedad de acciones; es amplia no se enfoca en lo que debe hacer.
+- Lo ideal una alta cohesión significa que la clase se enfoca en lo que deberia estar haciendo, es decir solo métodos relacionados con la intención de la clase.
+
+![Alta cohesión](src/images/alta-cohesion.png)
+
+### Acomplamiento
+
+Se refiere a cuán relacionadas o dependientes son dos clases o módulos entre sí.
+
+- En bajo acoplamiento, cambiar algo importante en una clase no deberia afectar a la otra.
+- En alto acomplamiento, dificultaría el cambio y el mantenimiento de su código; dado que las clases están muy unidas, hacer un cambio podría requeriar una renovación completa del sistema.
+
+![Acoplamiento](src/images/acoplamiento.jpg)
