@@ -135,3 +135,40 @@ Se refiere a cuán relacionadas o dependientes son dos clases o módulos entre s
 - En alto acomplamiento, dificultaría el cambio y el mantenimiento de su código; dado que las clases están muy unidas, hacer un cambio podría requeriar una renovación completa del sistema.
 
 ![Acoplamiento](src/images/acoplamiento.jpg)
+
+### Optimizaciones prematuras
+
+Mantener abiertas las opciones retrasando la toma de decisiones nos permite darle mayor relevancia a lo que es más importante en una aplicación.
+
+### Complejidad esencial
+
+La complejidad es inherente al problema.
+
+### Complejidad accidental
+
+Cuando implementamos una solución compleja a la mínima indispensable.
+
+### Nombres poco descriptivos
+
+- Nombres de variables mal nombradas
+- Nombre de clases genéricas
+- Nombres de funciones mal nombradas
+- Ser muy especifico o muy generico
+
+### Duplicidad de código
+
+No aplicar el principio DRY.
+
+#### **Real**
+
+- Código es idéntico y cumple la misma función.
+- Un cambio implicaría actualizar todo el código idéntico en varios lugares.
+- Incrementa posibilidades de error humano al olvidar una parte para actualizar.
+- Mayor cantidad de pruebas innecesarias.
+- Si notas que estas copiando código es probable que podrias refactorizar para no caer en DRY.
+
+#### **Accidental**
+
+- Código luce similar pero cumple con funciones distintas
+- Cuando hay un cambio solo hay que modificar un solo lugar.
+- Este tipo de duplicidad se puede trabajar con parametros u optimizaciones.
