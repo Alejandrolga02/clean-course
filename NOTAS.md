@@ -172,3 +172,22 @@ No aplicar el principio DRY.
 - Código luce similar pero cumple con funciones distintas
 - Cuando hay un cambio solo hay que modificar un solo lugar.
 - Este tipo de duplicidad se puede trabajar con parametros u optimizaciones.
+
+### Inflación
+
+- Metodos enormes: con muchas lineas que se hacen dificiles de mantener; en estos casos se recomienda refactorizar en funciones mas pequeñas y entendibles.
+- Clases grandes: al igual que en el caso de los métodos se deben separar en pequeños submodulos para reducir la duplicidad de código, favorecer la reutilización y que las clases tengan un proposito único.
+- Obsesión primitiva: La obsesión primitiva ocurre cuando se utilizan tipos de datos primitivos (como strings, números, booleanos) para representar conceptos importantes del dominio, en lugar de crear tipos o clases específicas para ellos.
+
+**Problemas que genera:**
+
+- Dificulta la validación y el control de los datos.
+- Hace el código menos expresivo y más propenso a errores.
+- Complica el mantenimiento y la evolución del sistema.
+
+### Acopladores
+
+- Feature Envy: Cuando un metodo o funcion hace mucha referencia a una funcion de otro modulo tal vez la refactorizacion no fue buena (sinceramente no me quedó del todo clara)
+- Intimidad inapropiada: Cuando una clase usa campos y metodos internos de otra clase, las buenas clases deben saber lo menos de las clases con las que interactua.
+- Cadenas de mensajes: Es cuando una función **A** llama una función **B** y esta a una función **C** y esta misma a una función **D**
+- The middle man es cuando una función solo existe para pasarle los parametros a otra función, significa que no deberia de existir.
