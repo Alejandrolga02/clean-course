@@ -191,3 +191,18 @@ No aplicar el principio DRY.
 - Intimidad inapropiada: Cuando una clase usa campos y metodos internos de otra clase, las buenas clases deben saber lo menos de las clases con las que interactua.
 - Cadenas de mensajes: Es cuando una función **A** llama una función **B** y esta a una función **C** y esta misma a una función **D**
 - The middle man es cuando una función solo existe para pasarle los parametros a otra función, significa que no deberia de existir.
+
+## Principios SOLID
+
+### Principio de responsabilidad única
+
+Una clase debe tener una unica responsabilidad, tener mas de una responsabilidad hacen que nuestras clases sean mas difiiles de leer, testear y mantener. Esto no significa que solo deba hacer una sola cosa se refiere a que las clases o modulos deben realizar procesos o acciones las cuales esten estrictamente relacionadas entre si.
+
+#### Detectar violaciones
+
+- Nombres de clases demasiado genericos.
+- Cambios en el codigo suelen afectar la clase o modulo.
+- La clase involucra multiples capas.
+- Numero elevado de importaciones en ocasiones.
+- Cantidad elevada de metodos publicos.
+- Excesivo numero de lineas de codigo segun el caso.
