@@ -206,3 +206,12 @@ Una clase debe tener una unica responsabilidad, tener mas de una responsabilidad
 - Numero elevado de importaciones en ocasiones.
 - Cantidad elevada de metodos publicos.
 - Excesivo numero de lineas de codigo segun el caso.
+
+### Principio Open and Closed
+
+Los módulos deben estar abiertos para la extensión, pero cerrados para la modificación. Esto significa que deberíamos poder agregar nueva funcionalidad sin modificar el código existente.
+
+#### Detectar violaciones
+
+- Cambios normalmente afectan a nuestra clase o módulo.
+- Cuando una clase o módulo afecta muchas capas. (Presentacion, almacenamiento, etc...)
