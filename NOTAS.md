@@ -215,3 +215,7 @@ Los módulos deben estar abiertos para la extensión, pero cerrados para la modi
 
 - Cambios normalmente afectan a nuestra clase o módulo.
 - Cuando una clase o módulo afecta muchas capas. (Presentacion, almacenamiento, etc...)
+
+### Principio de sustitución de Liskov
+
+Las subclases deben ser sustituibles por sus superclases sin alterar el comportamiento del programa. Esto significa que una clase hija debe poder ser utilizada en lugar de su clase padre sin causar errores o comportamientos inesperados.
